@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: king-xd-bot-mini
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: |
+      apt-get update && apt-get install -y ffmpeg python3 python3-pip curl || true
+      pip3 install -U yt-dlp || true
+      npm install
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: PORT
+        value: "3000"
+      - key: SESSION_ID
+        sync: false
+      - key: OWNER_NUMBER
+        sync: true
+      - key: BOT_IMAGE
+        sync: true
+      - key: CHANNEL_JID
+        sync: true
+      - key: BOT_NAME
+        value: "KING-XD Bot Mini"
+      - key: PREFIX
+        value: "."
