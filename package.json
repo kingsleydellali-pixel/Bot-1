@@ -1,0 +1,28 @@
+{
+  "name": "king-xd-bot-mini",
+  "version": "10.0.0",
+  "description": "KING-XD Bot Mini v10 — Multi-Device WhatsApp Bot with Downloader, Group Manager, Protection Tools and Web Pairing Dashboard.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "bash -c 'command -v yt-dlp >/dev/null 2>&1 || (curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp && chmod +x /usr/local/bin/yt-dlp) || true'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^6.7.7",
+    "axios": "^1.7.7",
+    "express": "^4.21.0",
+    "file-type": "^19.5.0",
+    "fs-extra": "^11.2.0",
+    "jimp": "^0.22.12",
+    "pino": "^9.4.0",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "keywords": ["whatsapp", "bot", "baileys", "multi-device", "downloader"],
+  "author": "ᴋɪɴɢsʟᴇʏ-xᴍᴅ ᴛᴇᴄʜ",
+  "license": "MIT"
+}
